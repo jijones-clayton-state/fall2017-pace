@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head> 
+	<meta charset="UTF-8" />
+	<title>Trinity United Methodist Church</title>
+	<link rel="stylesheet" type="text/css" href="CSS/main.css" />
+	<link rel="shortcut icon" type="image/png" href="Images/favicon.png"/>
+</head>
+<body>
+	<header>
+		<img src = "Images/Logo.svg" alt = "Logo">
+	</header>
+	<nav>
+		<a href="main.html">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">About Us
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="about.html">About Us</a>
+				<a href="facility.html">Facility</a>
+			</div>
+		</div>
+		<a href="history.html">History</a>
+		<div class="dropdown">
+			<button class="dropbtn">Ministries 
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ministries.html">Ministries</a>
+				<a href="ministries.html#B">Boards</a>
+			</div>
+		</div>
+		<a href="events.html">Upcoming Events</a>
+		<a href="directions.html">Directions</a>
+		<a href="https://www.facebook.com/TrinityUnitedMethodistChurchStockbridge/">Facebook</a>
+		<a href="contact.html">Contact Us</a>
+		<a style="float:right" class="active" href="donate.html">Donate</a>
+	</nav>
+
+	<aside>
+		<br>
+		<h3> Service Hours:</h3>
+		<p>Sunday School: 9:45 - 10:45 AM</p>
+		<p>Sunday Worship: 11:00 AM</p>
+		<p>Children's Church: 11:15 AM</p>
+		<p>Children Bible Study: Tuesday @ 7:00 PM</p>
+		<p>Adult Bible Study: Tuesday @ 7:00 PM</p>
+		<p>Coffee Shop: Sunday @ 8:00 - 10:30 AM</p>
+  
+		<object type="clsid/d27cdb6e-ae6d-11cf-96b8-444553540000" data="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="movie" value="https://www.biblegateway.com/usage/votd/votd.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<embed src="https://www.biblegateway.com/usage/votd/votd.swf" quality="high" id="votd" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+	</aside>
+
+	<article>
+		<br>
+		<h1> Welcome to Trinity United Methodist Church! </h1>
+		<div class="slideshow-container">
+			<div class="mySlides">
+				<img src = "Images/Church1.jpg" alt = "Image1">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church2.jpg" alt = "Image2">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church3.jpg" alt = "Image3">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church4.jpg" alt = "Image4">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church5.jpg" alt = "Image5">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church6.jpg" alt = "Image6">
+			</div>
+			<div class="mySlides">
+				<img src = "Images/Church7.jpg" alt = "Image7">
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>	
+
+		<div style="margin-left:625px">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span> 
+			<span class="dot" onclick="currentSlide(5)"></span> 
+			<span class="dot" onclick="currentSlide(6)"></span> 
+			<span class="dot" onclick="currentSlide(7)"></span> 
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {
+					slideIndex = 1
+				} 
+				if (n < 1) {
+					slideIndex = slides.length
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none"; 
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block"; 
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+
+		<img style = "margin-left: 20px; margin-top: 30px" src = "Images/MissionVision.svg" alt = "Mission and Vision">
+		<form action="https://www.biblegateway.com/quicksearch/">
+			<table>
+				<tr><th style="background-color: #600; color:#fff; text-align: center; padding: 0 10px;">Lookup a word or passage in the Bible</th></tr>
+				<tr><td style="background-color: #fff; text-align: center; padding: 0 10px;">
+					<div style="margin-bottom: 0;">
+						<input style="margin:5px" type="text" name="quicksearch" /><br />
+						<input style="margin:2px" type="submit" value="Search BibleGateway.com" /><br />
+					</div>
+					<a href="https://www.biblegateway.com/" title="The Bible in multiple languages, versions, and formats">
+					<img src = "https://www.biblegateway.com/assets/images/logos/bglogo_sm.gif?103106" alt= "BibleGateway.com" /></a><br />
+					<small>
+						<a href="https://www.biblegateway.com/usage/form/">Include this form on your page</a><br />
+					</small>
+				</td></tr>
+			</table>
+		</form>
+
+		<p>We are delighted you have taken an interest in Trinity United Methodist Church by visiting with us today. 
+			While you are here, we hope that you will take a closer look at us, because we are confident that you will
+			discover a local church body that welcomes you, and place filled with answers to some of the spiritual questions you may. 
+			Trinity is known as the small church with a loving heart.</p>
+		<p>More importantly, you will find that God is here. If you have not already met the Lord, you can come to know Him here.
+			Jesus said, "And this is eternal life, that they know you the only true God, and Jesus Christ whom you have sent.“ (John 17:3 NIV).
+			Saint Augustine said, “Our hearts are restless until they discover rest in God." He was right. If the truth were told; 
+			then we were made in the image and likeness of God and are not truly happy until we are at rest in Him. 
+			At Trinity United Methodist Church, your aching heart can find rest in God.</p>
+		<p>It may give you relief to know that you will not be alone. You will also find real people here. 
+			You will meet others who have begun life restless and have come to find rest in God. At Trinity United Methodist Church, 
+			you will find fellowship and community. We are part of the family of God and would rejoice to have you join us.</p>
+		<p>In short. you will find us to be a God centered, caring community of individuals who are enthusiastic about having the 
+			chance to extend to you the same love, hope and happiness we have received from the Lord. We extend to you a 
+			cordial invitation tojoin us this coming Lord’s Day as the family assembles to draw near to God through prayer,
+			thoughtful contemporary songs, traditional hymns, great gospel spirituals and inspiring relevant messages from God’s word. 
+			After the worship service, we tend to linger and talk to one another. So, as we seek you out please take a moment to get to know us better.</p>
+		<p>Yours in Christ,</p>
+		<p style = "font-style: italic">Pastor Jacqueline Johnson</p>
+		<br>
+
+	</article>
+
+	<footer>
+		<p>Trinity United Methodist Church</p>
+		<p>112 Wilson Ave | Stockbridge, Georgia 30281</p>
+		<p>(678)782-6800 | tumc112@gmail.com | <a href="www.trinityumcstockbridge.org"> www.trinityumcstockbridge.org </a> </p>
+	</footer>
+</body>
+</html>
